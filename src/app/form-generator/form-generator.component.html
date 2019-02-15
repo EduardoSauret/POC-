@@ -1,0 +1,15 @@
+<!-- <p ngFor="let formField of formFields">
+  {{formField}}
+</p> -->
+<button mat-raised-button color="primary" (click)="addItems()">Add fields to your form</button>
+<section *ngFor="let item of items">
+  <mat-form-field>
+    <mat-select placeholder="Field type">
+      <mat-option *ngFor="let option of options" [value]="option">
+        <!-- {{food.viewValue}} -->
+        {{option}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div>properties template</div>
+</section>
